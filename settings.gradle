@@ -4,4 +4,4 @@ include ':app'
 include ':libausbc'
 include ':libuvc'
 include ':libnative'
-
+include ':libuvccommon'

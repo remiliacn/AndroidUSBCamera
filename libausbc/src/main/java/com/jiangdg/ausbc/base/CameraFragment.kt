@@ -492,6 +492,18 @@ abstract class CameraFragment : BaseFragment(), ICameraStateCallBack {
     }
 
     /**
+     * Set camera focus
+     */
+    protected fun setFocus(focus: Int) {
+        getCurrentCamera()?.let { camera ->
+            if (camera !is CameraUVC) {
+                return
+            }
+            camera.setFocus(focus)
+        }
+    }
+
+    /**
      * Get auto focus
      *
      * @return is camera auto focus opened

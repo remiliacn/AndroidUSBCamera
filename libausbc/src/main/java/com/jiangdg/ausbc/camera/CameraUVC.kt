@@ -215,6 +215,7 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
             }
         }
         mUvcCamera?.autoFocus = true
+        mUvcCamera?.focus = 256
         mUvcCamera?.autoWhiteBlance = true
         mUvcCamera?.startPreview()
         mUvcCamera?.updateCameraParams()
@@ -330,6 +331,12 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
      * @return true enable auto focus
      */
     fun getAutoFocus() = mUvcCamera?.autoFocus
+
+    fun getFocus() = mUvcCamera?.focus
+
+    fun setFocus(focus: Int) {
+        mUvcCamera?.focus = focus
+    }
 
     /**
      * Reset auto focus

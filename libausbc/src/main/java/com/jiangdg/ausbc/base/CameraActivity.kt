@@ -505,6 +505,24 @@ abstract class CameraActivity: BaseActivity(), ICameraStateCallBack {
         }
     }
 
+    protected fun getFocus(): Int? {
+        return getCurrentCamera()?.let { camera ->
+            if (camera !is CameraUVC) {
+                return@let 100
+            }
+            camera.getFocus()
+        }
+    }
+
+    protected fun setFocus(focus: Int) {
+        getCurrentCamera()?.let { camera ->
+            if (camera !is CameraUVC) {
+                return
+            }
+            camera.setFocus(focus)
+        }
+    }
+
     /**
      * Reset auto focus
      */
