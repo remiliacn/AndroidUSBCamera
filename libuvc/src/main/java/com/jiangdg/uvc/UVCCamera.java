@@ -141,7 +141,7 @@ public class UVCCamera {
     protected int mExposurePriorityMin, mExposurePriorityMax, mExposurePriorityDef;
     protected int mExposureMin, mExposureMax, mExposureDef;
     protected int mAutoFocusMin, mAutoFocusMax, mAutoFocusDef;
-    protected int mFocusMin = 0, mFocusMax = 256, mFocusDef;
+    protected int mFocusMin = 0, mFocusMax = 25600, mFocusDef;
     protected int mFocusRelMin, mFocusRelMax, mFocusRelDef;
     protected int mFocusSimpleMin, mFocusSimpleMax, mFocusSimpleDef;
     protected int mIrisMin, mIrisMax, mIrisDef;
